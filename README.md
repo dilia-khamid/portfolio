@@ -7,7 +7,7 @@
 
 ## 📂 Мои проекты
 
-### 🔹 [Лендинг](https://ajyu-end.github.io/portfolio/landing/index.html)
+### 🔹 [Лендинг](https://dilia-khamid.github.io/portfolio/landing/index.html)
 Простой одностраничный сайт:
 - Шапка с логотипом и меню  
 - Блок «О компании»  
@@ -16,14 +16,14 @@
 
 ---
 
-### 🔹 [Адаптивный блок](https://ajyu-end.github.io/portfolio/adaptive-block/index.html)
+### 🔹 [Адаптивный блок](https://dilia-khamid.github.io/portfolio/adaptive-block/index.html)
 Пример адаптивной верстки:
 - На компьютере — две колонки (текст + картинка)  
 - На телефоне — перестраивается в одну колонку  
 
 ---
 
-### 🔹 [Email-шаблон](https://ajyu-end.github.io/portfolio/email-template/email.html)
+### 🔹 [Email-шаблон](https://dilia-khamid.github.io/portfolio/email-template/email.html)
 Шаблон письма для рассылок:
 - Заголовок и баннер  
 - Текстовый блок  
