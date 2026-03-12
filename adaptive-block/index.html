@@ -1,27 +1,193 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Адаптивный блок</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <section class="block">
-    <div class="container">
-      <div class="text">
-        <h2>Адаптивная верстка</h2>
-        <p>
-          Этот блок перестраивается в зависимости от размера экрана. 
-          На компьютере текст и картинка расположены в две колонки, 
-          а на телефоне — в одну.
-        </p>
-      </div>
-      <div class="image">
-        <img src="https://via.placeholder.com/400x250" alt="Пример картинки">
-      </div>
-    </div>
-  </section>
-</body>
-</html>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио сотрудника - Петров Василий</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Шапка профиля -->
+        <header class="profile-header">
+            <div class="profile-avatar">
+                <div class="avatar-placeholder">ПВ</div>
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">Петров Василий</h1>
+                <p class="profile-position">DevOps-инженер</p>
+                <p class="profile-description">
+                    Хочу работать в новом продукте, искать лучшие решения в классной команде.
+                    На связи с 8:00 по 21:00 по МСК.
+                </p>
+                <div class="profile-actions">
+                    <button class="btn btn-primary" aria-label="Связаться с нами">Связаться</button>
+                    <button class="btn btn-secondary" aria-label="Портфолио">Портфолио</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Основной контент -->
+        <div class="content-grid">
+            <!-- Левая колонка -->
+            <aside class="sidebar">
+                <!-- Основная информация -->
+                <section class="card">
+                    <h2 class="card-title">Основная информация</h2>
+                    <div class="info-list">
+                        <div class="info-item">
+                            <span class="info-label">ФИО:</span>
+                            <span class="info-value">Петров Василий Иванович</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Страна:</span>
+                            <span class="info-value">Россия</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Город:</span>
+                            <span class="info-value">Москва</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Telegram:</span>
+                            <span class="info-value">@ivanovich</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value">ivanovich@mail.ru</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Телефон:</span>
+                            <span class="info-value">+7 (999) 999-99-99</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Паспорт навыков -->
+                <section class="card">
+                    <h2 class="card-title">Паспорт навыков</h2>
+                    <div class="skills-chart" id="skillsChart"></div>
+                </section>
+
+                <!-- Образование -->
+                <section class="card">
+                    <h2 class="card-title">Образование</h2>
+                    <div class="education-list">
+                        <div class="education-item">
+                            <h3>Тракторный факультет</h3>
+                            <p>Тракторист</p>
+                        </div>
+                        <div class="education-item">
+                            <h3>Повышение квалификации</h3>
+                            <p>DevOps-инженер</p>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+
+            <!-- Правая колонка -->
+            <main class="main-content">
+                <!-- Достижения -->
+                <section class="card">
+                    <div class="section-header">
+                        <h2 class="card-title">Достижения</h2>
+                        <span class="achievements-score">164 балла</span>
+                    </div>
+                    <div class="achievements-container">
+                        <div class="achievements-grid" id="achievementsGrid"></div>
+                        <button class="achievements-nav achievements-nav-prev" id="prevBtn" style="display: none;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="achievements-nav achievements-nav-next" id="nextBtn" style="display: none;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="achievements-dots" id="achievementsDots"></div>
+                </section>
+
+                <!-- Работа в проектах -->
+                <section class="card">
+                    <h2 class="card-title">Работа в проектах</h2>
+
+                    <div class="project">
+                        <h3 class="project-title">Проект ProfPlay</h3>
+                        <p class="project-description">
+                            ProfPlay — онлайн-платформа профориентации, специализирующаяся на методах геймификации.
+                            Основная цель платформы — сделать процесс выбора будущей профессии для подростков
+                            не только продуктивным, но и интересным, опираясь на игровые практики.
+                        </p>
+                        <div class="project-goals">
+                            <strong>Что мы хотим сделать:</strong>
+                            <ol>
+                                <li>Создать систему тестирования пользователей.</li>
+                                <li>Проанализировать и выбрать лучшие методы геймификации профориентации.</li>
+                                <li>Разработать концепцию мини-игр по различным профессиям.</li>
+                                <li>Внедрить ачивки и балльную систему для участников.</li>
+                            </ol>
+                        </div>
+                        <div class="project-tech">
+                            <strong>Инструменты и технологии:</strong>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                        <ul class="project-achievements">
+                            <li>Или применял навыки?</li>
+                            <li>Выполнил что-то еще</li>
+                            <li>Сделал то-се</li>
+                        </ul>
+                    </div>
+
+                    <div class="project">
+                        <h3 class="project-title">Развитие инструментов ГК Эйтика</h3>
+                        <p class="project-description">
+                            Вклад в развитие инструментов группы компаний Эйтика. Описание этих инструментов
+                            вообще всех, универсальное. А справа будем писать функции конкретного этого человека.
+                            Что-то еще.
+                        </p>
+                        <ul class="project-achievements">
+                            <li>Или применял навыки?</li>
+                            <li>Выполнил что-то еще</li>
+                            <li>Сделал то-се</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Отзывы коллег -->
+                <section class="card">
+                    <h2 class="card-title">Отзывы коллег</h2>
+                    <div class="reviews-grid">
+                        <div class="review-item">Всегда помогает в трудных ситуациях</div>
+                        <div class="review-item">Всегда вовремя и четко выполняет свои задачи</div>
+                        <div class="review-item">Легко взаимодействовать при командной работе</div>
+                        <div class="review-item">Легко взаимодействовать при командной работе</div>
+                        <div class="review-item">Легко взаимодействовать при командной работе</div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <h2>Давайте работать вместе!</h2>
+            <div class="footer-contacts">
+                <span>@ivanovich</span>
+                <span>ivanovich@mail.ru</span>
+                <span>+7 (999) 999-99-99</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
